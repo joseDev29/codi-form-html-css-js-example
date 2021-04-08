@@ -1,0 +1,392 @@
+:root {
+  --purple-primary: #7245d1;
+  --gray-form: #e9e9e9;
+  --red-reset: #da2c4c;
+  --black-text: #535353;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  outline-color: var(--purple-primary);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  padding-bottom: 30px;
+  color: var(--black-text);
+}
+
+.modal-container {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.invisible {
+  display: none;
+}
+
+.modal {
+  width: 90%;
+  min-width: 300px;
+  max-width: 400px;
+  margin: 30px auto 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px 15px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.modal__contenido {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__imagen {
+  width: 50%;
+}
+
+.modal__descripcion {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.modal__boton {
+  display: block;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  background-color: var(--purple-primary);
+}
+
+.zona-superior {
+  width: 100%;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zona-superior__titulo {
+  font-size: 6rem;
+  font-weight: 900;
+  text-align: center;
+  color: var(--purple-primary);
+  margin-top: 25px;
+}
+
+.zona-superior__contenido {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zona-superior__descripcion {
+  display: inline-block;
+  width: 90%;
+  max-width: 500px;
+  margin-top: 35px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.zona-superior__descripcion span {
+  font-weight: 900;
+  color: var(--purple-primary);
+}
+
+.zona-superior__imagen {
+  width: 90%;
+  max-width: 500px;
+  margin-top: 25px;
+}
+
+.zona-inferior {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario {
+  width: 95%;
+  min-width: 320px;
+  max-width: 500px;
+  padding: 20px 10px;
+  border-radius: 8px;
+  background-color: var(--gray-form);
+  margin-top: 35px;
+}
+
+.formulario__titulo {
+  font-size: 3.2rem;
+  font-weight: 900;
+  text-align: center;
+  color: var(--purple-primary);
+}
+
+.formulario__error {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 2.5px;
+  color: var(--red-reset);
+}
+
+.formulario__grupo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.formulario__pareja {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.formulario__label {
+  margin-bottom: 7px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--purple-primary);
+}
+
+.formulario__input-text {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  padding-left: 5px;
+  color: var(--black-text);
+}
+
+.formulario__subgrupo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.formulario__subgrupo .formulario__pareja {
+  width: 49%;
+}
+
+.formulario__select {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  color: var(--black-text);
+}
+
+.formulario__radio {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.formulario__radio input {
+  width: 20px;
+  height: 20px;
+}
+
+.formulario__radio-label {
+  font-size: 1.3rem;
+  margin: 0 10px 0 5px;
+  color: var(--purple-primary);
+}
+
+.input-checkbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-checkbox label {
+  width: calc(100% - 30px);
+  margin-left: 5px;
+  font-size: 1.4rem;
+  color: var(--purple-primary);
+}
+
+.input-checkbox input {
+  width: 20px;
+  height: 20px;
+}
+
+.formulario__botones {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.formulario__botones button {
+  width: 49%;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 35px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.boton-resetear {
+  background-color: var(--red-reset);
+}
+
+.boton-enviar {
+  background-color: var(--purple-primary);
+}
+
+@media (min-width: 740px) {
+  .zona-superior__titulo {
+    font-size: 8rem;
+  }
+
+  .zona-superior__contenido {
+    width: 700px;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 15px;
+  }
+
+  .zona-superior__descripcion {
+    width: 350px;
+    text-align: left;
+    font-size: 2.8rem;
+  }
+
+  .zona-superior__imagen {
+    width: 350px;
+  }
+
+  .formulario {
+    width: 700px;
+    max-width: none;
+    padding: 20px 20px;
+  }
+
+  .formulario__titulo {
+    font-size: 3.8rem;
+  }
+
+  .formulario__grupo {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+
+  .formulario__grupo .formulario__pareja {
+    width: 49%;
+  }
+
+  .formulario__subgrupo {
+    width: 65%;
+  }
+
+  .formulario__grupo .formulario__telefono {
+    width: 34%;
+  }
+
+  .formulario__input-text,
+  .formulario__select {
+    height: 45px;
+  }
+
+  .formulario__label {
+    font-size: 1.6rem;
+  }
+
+  .formulario__radio-label {
+    font-size: 1.4rem;
+  }
+
+  .input-checkbox label {
+    font-size: 1.6rem;
+  }
+
+  .formulario__botones {
+    justify-content: flex-end;
+  }
+  .formulario__botones button {
+    width: 35%;
+    height: 50px;
+    margin-left: 5px;
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 1250px) {
+  main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .zona-superior {
+    width: 450px;
+  }
+
+  .zona-superior__contenido {
+    width: 100%;
+    flex-direction: column;
+    margin-left: none;
+  }
+
+  .zona-superior__descripcion {
+    width: 100%;
+  }
+
+  .zona-superior__imagen {
+    width: 100%;
+    max-width: none;
+  }
+
+  .zona-inferior {
+    width: 700px;
+  }
+}
